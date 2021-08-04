@@ -1,0 +1,97 @@
+@mixin border-gradient($from, $to, $weight: 0) {
+    $mix-main: mix($from, $to);
+    $mix-secondary-from: mix($mix-main, $from);
+    $mix-secondary-to: mix($mix-main, $to);
+  
+    box-shadow: 0 1px 0 $weight rgba($mix-secondary-to, 0.25),
+      0 -1px 0 $weight rgba($mix-secondary-from, 0.25),
+      1px 0 0 $weight rgba($mix-secondary-to, 0.25),
+      -1px 0 0 $weight rgba($mix-secondary-from, 0.25),
+      1px -1px 0 $weight rgba($mix-main, 0.5),
+      -1px 1px 0 $weight rgba($mix-main, 0.5), 1px 1px 0 $weight rgba($to, 0.75),
+      -1px -1px 0 $weight rgba($from, 0.75);
+  }
+  
+  $XS: 480px;
+  $XS1: 576px;
+  $SM: 768px;
+  $SM3: 992px;
+  $MD: 1024px;
+  $L: 1180px;
+  $L2: 1200px;
+  $L3: 1300px;
+  $XL: 1380px;
+  $XL1: 1400px;
+  $XXL: 1440px;
+  $XXXL: 1536px;
+  $XXXL1: 1600px;
+  $XXXXL: 1900px;
+  
+  // media queries
+  
+  @mixin responsive($canvas) {
+    @if $canvas==XS {
+      @media only screen and (min-width: $XS) {
+        @content;
+      }
+    } @else if $canvas==XS1 {
+      @media only screen and (min-width: $XS1) {
+        @content;
+      }
+    } @else if $canvas==SM {
+      @media only screen and (min-width: $SM) {
+        @content;
+      }
+    } @else if $canvas==SM3 {
+      @media only screen and (min-width: $SM3) {
+        @content;
+      }
+    } @else if $canvas==MD {
+      @media only screen and (min-width: $MD) {
+        @content;
+      }
+    } @else if $canvas==L {
+      @media only screen and (min-width: $L) {
+        @content;
+      }
+    } @else if $canvas==L2 {
+      @media only screen and (min-width: $L2) {
+        @content;
+      }
+    } @else if $canvas==L3 {
+      @media only screen and (min-width: $L3) {
+        @content;
+      }
+    } @else if $canvas==XL {
+      @media only screen and (min-width: $XL) {
+        @content;
+      }
+    } @else if $canvas==XL1 {
+      @media only screen and (min-width: $XL1) {
+        @content;
+      }
+    } @else if $canvas==XXL {
+      @media only screen and (min-width: $XXL) {
+        @content;
+      }
+    } @else if $canvas==XXXL {
+      @media only screen and (min-width: $XXXL) {
+        @content;
+      }
+    } @else if $canvas==XXXL1 {
+      @media only screen and (min-width: $XXXL1) {
+        @content;
+      }
+    } @else if $canvas==XXXXL {
+      @media only screen and (min-width: $XXXXL) {
+        @content;
+      }
+    }
+  }
+  
+  @mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

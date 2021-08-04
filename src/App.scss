@@ -1,0 +1,27 @@
+@import "./styles/variable";
+@import "./styles/mixin";
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Work+Sans:wght@300;400;500;600;700&display=swap");
+
+html {
+  font-size: 56% !important;
+  overflow-x: hidden;
+  @include responsive(XL){
+    font-size: 62.5% !important;
+  }
+}
+body {
+  background-color: #E5E5E5 !important;
+  font-size: 1.6rem;
+  line-height: unset !important;
+  overflow-x: hidden;
+  font-family: 'Work Sans', sans-serif !important;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+};

@@ -1,0 +1,61 @@
+@import '../../../App.scss';
+
+.statistical{
+    &__headline{
+        color: map-get($map: $colors, $key:'gold' );
+        font-size: $font-medium;
+        text-align: left;
+        margin: 0 10%;
+        @include Responsive (SM){
+            text-align: center;
+        }
+    }
+    &__text{
+        color: white;
+        font-size: $font-semi;
+        text-align: left;
+        margin: 0 10%;
+        margin-top: 15px;
+        @include Responsive (SM){
+            margin-top: 65px;
+            text-align: center;
+        }
+    }
+    &__box{
+        border-radius: 12px;
+        display: flex;
+        justify-content: center ;
+        border: .5px solid grey;
+        background-image: map-get($map: $background-linears, $key: 'black-grey' );
+        width: 80%;
+        margin: 15px auto;
+        @include Responsive (SM){
+            margin-top: 65px;
+        }
+        .box-item{
+            margin: 2.5rem 0;
+            border-right: .5px solid grey;
+            @include Responsive (SM){
+                margin: 5rem 0;
+            }
+            &__name{
+                color: white;
+                font-size: $font-normal;
+                text-align: center;
+            }
+            &__value{
+                margin: 20px 0px;
+                color: map-get($map: $colors, $key:'gold' );
+                font-size: $font-medium-large;
+                text-align: center;
+            }
+            &--no-border{
+                border-right:unset 
+            }
+        }
+    }
+    &__bottom-icon{
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,62 @@
+@import '../../../App.scss';
+
+.flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.full-automatic{
+    // display: flex;
+    // justify-content: space-between;
+    margin: 0 10%;
+    &__content{
+        .headline{
+        color: white;
+        font-size: $font-xlarge;
+        text-align: left;
+        }
+        .sub-text{
+            margin-top: 18px;
+            color: #c4c4c4;
+            text-align: left;
+            margin-left: 0;
+            @include Responsive (SM){
+                margin-left: 15%;
+
+            }
+        }
+    }
+    &__banner-text{
+        margin-top: 18px;
+        color: #c4c4c4;
+        font-size: $font-semi;
+        white-space: nowrap;
+    }
+    &__banner{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 70%;
+            height: 100%;
+        }   
+    }
+    &__bottom-icon{
+        display: flex;
+        justify-content: center;
+    }
+    &__progress-bar{
+        border-bottom: 4px solid map-get($map: $colors, $key: "black-two");
+        width: 100%;
+        border-radius: 4px;
+        position: relative;
+        margin-top: 2rem;
+        .loading-line {
+            border-bottom: 4px solid
+            map-get($map: $colors, $key: "grey-white");
+            width: 15%;
+            border-radius: 4px;
+            position: absolute;
+            top: 0;
+            }
+    }
+}

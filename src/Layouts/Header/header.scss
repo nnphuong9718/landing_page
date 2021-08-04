@@ -1,0 +1,67 @@
+@import "../../styles/global.scss";
+@import '../../styles/mixin.scss';
+@import "../../styles/variable";
+
+.language-flag{
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin-right: 1.2rem;
+}
+.header-container {
+    background-color: #E5E5E5;
+    position: relative;
+    z-index: 1;
+    @include responsive(XL){
+        // border-bottom-left-radius: $border-radius-medium;
+        // border-bottom-right-radius: $border-radius-medium;
+    }
+    .sub-title{
+        font-weight: 300;
+    }
+    .header-content {
+        padding: 2rem 0;
+        margin: 0 12rem;
+        // width: 80%;
+        // max-width: 128rem;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 10;
+        border-bottom: 1px solid map-get($map: $colors, $key:'grey' );
+        .logo-container {
+            cursor: pointer;
+            margin: 1.2rem 0;
+            &__image {
+                max-height: 4.8rem;
+                max-width: 150px;
+            }
+        }
+        .menu {
+            // font-size: 2rem;
+            color: map-get($text-color, "white");
+            // display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            display: flex;
+
+            a {
+                margin: 0 10rem 0 0;
+                cursor: pointer;
+                color: $white;
+                display: none;
+                &:nth-last-child(1) {
+                    margin: 0;
+                    display: block;
+                }
+            }
+
+            @include responsive(MD) {
+                a{
+                    display: block;
+                }
+            }
+        }
+    }
+}

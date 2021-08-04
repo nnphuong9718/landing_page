@@ -1,0 +1,46 @@
+@import '../../App.scss';
+@import '../../styles/global.scss';
+
+.mx-120{
+    margin: 0 12rem;
+}
+.mt-70{
+    margin-top: 7rem;
+}
+.opening-part{
+    display: flex;
+
+    .open-text{
+        flex: 1;
+        &__headline{
+            font-family: 'Darker Grotesque';
+            font-size: 10rem;
+            line-height: 9rem;
+        }
+        .text-line-through{
+            text-decoration: line-through;
+        }
+        .text-red{
+            color: map-get($map: $colors, $key:'red' );
+            font-weight: 700;
+        }
+        .text-black{
+            color: map-get($map: $colors, $key:'text-black' );
+            font-weight: 700;
+        }
+    }
+
+   .open-images{
+       flex: 1;
+       position: relative;
+       .discount-stamp{
+        position: absolute;
+        top: 50px;
+        left: -20%;
+
+    }
+   }
+    
+}
+
+

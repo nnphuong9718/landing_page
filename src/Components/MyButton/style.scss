@@ -1,0 +1,47 @@
+@import '../../styles/variable';
+
+
+.disableBtn{
+
+}
+.my-button {
+    cursor: pointer;
+    padding: 12px 40px;
+    color: white !important;
+    background-color: map-get($map: $colors, $key:'black' );
+    text-align: center;
+    border: none;
+    white-space: nowrap;
+    &:hover{
+        // background-image: map-get($map: $background-linears, $key:'gold-hover' );
+    }
+    &:focus{
+        // background-image: map-get($map: $background-linears, $key:'gold-hover2' );
+    }
+    &--black{
+        // background-image: map-get($map: $background-linears, $key:'black-2' );
+        border: 1px solid map-get($map: $colors, $key:'gold' );
+        &:hover{
+            // background-image: map-get($map: $background-linears, $key:'main2' );
+        }
+        &:focus{
+            // background-image: map-get($map: $background-linears, $key:'main2' );
+        }
+    }
+    &--transparent{
+        padding: 8px 8px;
+        background-image: unset;
+        background-color: transparent;
+        &:hover{
+            background-color: map-get($map: $colors, $key:'grey' )  ;
+            border-radius: 50%;
+        }
+        &:focus{
+            background-color: map-get($map: $colors, $key:'grey' ) ;
+            border-radius: 50%;
+        }
+    }
+    &--small {
+        min-width: unset;
+    }
+}

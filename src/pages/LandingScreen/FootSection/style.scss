@@ -1,0 +1,55 @@
+@import '../../../App.scss';
+
+.foot-section{
+    width: 120vw;
+    height: 80vw;
+    border-radius: 50%;
+    // border: 1px solid #ffd86f;
+    box-shadow: 0px -10px 50px #ffd86f;
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    @include Responsive (SM){
+        top: 40%;
+    }
+    &__logo-coin98{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        img{
+            width: 100px;
+        }
+        @include Responsive (SM){
+           margin-top: 100px; 
+        }
+    }
+    &__text-box{
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        @include Responsive (SM){
+            margin-top: 50px;
+         }
+    }
+    &__text-authority{
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 12px;
+        margin-top: 15px;
+        @include Responsive (SM){
+            font-size: 16px;
+            margin-top: 15px;
+         }
+    }
+    .text-box-item{
+        padding: 6px 6px 12px 6px;
+        color: #c4c4c4;
+        border-bottom:  1px solid #c4c4c4;
+        font-size: 12px;
+        @include Responsive (SM){
+            font-size: 16px;
+            padding: 20px 20px 30px 20px;
+         }
+    }
+}

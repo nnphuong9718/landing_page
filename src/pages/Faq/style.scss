@@ -1,0 +1,240 @@
+@import "../../styles/global.scss";
+@import "../../styles/_mixin.scss";
+@import "../../styles/variable";
+
+.faq-container {
+    margin: 7.2rem 0 0 0;
+    .faq-image {
+        margin-top: 3rem;
+        text-align: center;
+        .image {
+            max-width: 80%;
+
+            @include responsive(XL){
+                max-width: 32rem;
+                // margin: $space-medium 0;
+            }
+        }
+    }
+    .faq-list {
+        width: 90%;
+        // @include responsive(MD){
+        //     // width: 100%;
+        // }
+        @include responsive(XL) {
+            width: 128rem;
+        }
+        margin: 0 auto 10rem;
+    }
+    .underline {
+        align-self: center;
+        margin: 0 auto $space-large;
+    }
+    .faq-item {
+        margin-top: 2rem;
+        &__question {
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            &__left {
+                font-weight: bold;
+                margin-right: 0.5rem;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                text-transform: uppercase;
+                background-color: map-get($background, "yellow");
+                text-align: center;
+                color: black;
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+            &__right {
+                text-transform: uppercase;
+                color: map-get($background, "yellow");
+                font-size: 2rem;
+            }
+        }
+
+        &__answer-content{
+            padding: 0.8rem 3rem 2rem 3rem;
+            color: $white;
+        }
+
+        &__answer {
+            position: relative;
+            &::before {
+                content: "";
+                width: 2rem;
+                height: 2rem;
+                display: inline-block;
+                background-color: map-get($background, "grey");
+                position: absolute;
+                top: 0;
+                @include responsive(IP) {
+                    left: 0.5rem;
+                }
+                @include responsive(XS) {
+                    left: 1rem;
+                }
+                @include responsive(SM) {
+                    left: 1.5rem;
+                }
+                @include responsive(MD) {
+                    left: 2rem;
+                }
+                @include responsive(XL) {
+                    left: 2rem;
+                }
+                @include responsive(XXL) {
+                    left: 3rem;
+                }
+                z-index: -1;
+                transform: rotate(45deg) translateY((-50%));
+            }
+            margin-top: 2rem;
+            padding: 0.3rem 0;
+            width: 100%;
+            // height: 10rem;
+            background-color: map-get($background, "grey");
+            border-radius: 2rem;
+            &__inside {
+                color: map-get($text-color, "white");
+                width: 95% !important;
+                margin: 0 auto;
+                &__item {
+                    font-weight: bold;
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 50%;
+                    line-height: 3rem;
+                    font-size: 2rem;
+                    background-color: map-get($background, "grey2");
+                    text-align: center;
+                }
+            }
+        }
+        &:nth-last-child(1) {
+            margin-bottom: 2rem;
+        }
+    }
+}
+.contact-container {
+    // background: url("../../assets/faq-top-left-color.png") top left no-repeat,
+    //     url("../../assets/faq-bottom-right-color.png") bottom right no-repeat,
+    //     url("../../assets/faq-main-color.png") no-repeat;
+    // background-size: contain, contain, cover;
+    background-image: url(../../assets/background/background-bottom.png);
+        background-size: stretch;
+        background-position: center center;
+    position: relative;
+    // height: 30rem;
+    padding: $space-large 0;
+    border-radius: $border-radius-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    .main-color {
+        min-width: 100%;
+        max-width: 100%;
+        height: 40rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .top-left-color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .bottom-right-color {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+    .contact-content {
+        // background: url("../../assets/faq-top-left-color.png") top left
+        //         no-repeat,
+        //     url("../../assets/faq-bottom-right-color.png") bottom right
+        //         no-repeat,
+        //     url("../../assets/faq-main-color.png");
+        max-width: 112.4rem;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .title {
+            font-weight: bold;
+            max-width: 100%;
+            font-size: 4rem;
+            @include responsive(IP) {
+                font-size: 3rem;
+                text-align: center;
+            }
+            @include responsive(SM) {
+                font-size: 3rem;
+            }
+            text-transform: uppercase;
+            color: black;
+        }
+        .divider {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .list-icon {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            &__divider {
+                border-left: 1px solid black;
+            }
+            &__middle {
+                display: flex;
+            }
+            &__icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // height: 2rem;
+                font-size: 2rem;
+                color: black;
+                font-weight: bold;
+                &__left {
+                    margin-right: 1rem;
+                    // height: 2rem;
+                    // width: 2rem;
+                }
+                &__right {
+                    align-self: center;
+                }
+                @include responsive(IP){
+                    margin-bottom: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                @include responsive(MD){
+                &:nth-child(2) {
+                    border-left: 1px solid black;
+                    border-right: 1px solid black;
+                }
+            }
+            }
+        }
+        .list-icon:nth-child(1) {
+            border-left: 1px solid red;
+        }
+    }
+}
+
+// responsive

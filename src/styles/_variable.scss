@@ -1,0 +1,62 @@
+$background-linears: (
+  'main': linear-gradient(to bottom, #2f2f2f, #151515),
+  'main2': linear-gradient(to bottom, #000000, #0e0e0e),
+  'black-2':linear-gradient(to bottom, #2f2f2f, #0f0f0f),
+  'black-grey':linear-gradient(to right, #0b0b0b, #1e1e1e),
+  'sand-brown': linear-gradient(to top, #d2a05e, #e1be80),
+  'gold-hover': linear-gradient(to top, #ffd86f, #e1be80),
+  'gold': linear-gradient(to top, #d2ad33, #fdde7b),
+  'gold-hover2': linear-gradient(to top right, #d2ad33, #fdde7b),
+  // 'gold':linear-gradient(to top, #f5b457, #ffd86f),
+  'icon-gold': linear-gradient(to top, #c48a39, #ffd86f),
+  
+);
+
+$colors: (
+  'grey': #858585,
+  'text-black': #4B4B4B,
+  'black': #1E1E1E,
+  'sand-brown': #EBA742,
+  'red': #9B5E50,
+);
+// $background: (
+//     "grey": #252525,
+//     "yellow": #CDA045,
+//     "grey1": #8C959D,
+//     "grey2": #454545
+// );
+
+// Colors List
+$gray: #252525;
+$gray1: #353535;
+$yellow: #d2a05e;
+$yellow1: #e1be80;
+$yellow2: #cda045;
+$yellow3: #edd55e;
+$green: #4d916e;
+$white: #ffffff;
+
+$text-color: (
+    "white": #f3f3f3,
+);
+
+
+$border-radius-small: 2rem;
+$border-radius-medium: 4rem;
+$border-radius-large: 8rem;
+
+$space-large: 10rem;
+$space-medium-large: 7.5rem;
+$space-medium: 6rem;
+$space-small: 3rem;
+
+$font-xlarge: 6.2rem;
+$font-large: 4.2rem;
+$font-medium-large: 3.2rem;
+$font-medium: 2.4rem;
+$font-normal: 1.6rem;
+$font-semi: 1.8rem;
+$font-small: 1.2rem;
+
+
+// Mobile variable

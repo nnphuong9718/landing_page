@@ -1,0 +1,21 @@
+@import "./variable";
+@import "./mixin";
+@import "./typo";
+
+h1{
+    margin: 0;
+}
+p{
+    font-size: $font-semi;
+    line-height: 2.8rem;
+    @include responsive (SM) {
+        line-height: 3.6rem;
+    }
+}
+// utilities 
+.text-danger{
+    color: map-get($map: $colors, $key:'red' );
+}
+.text-black{
+    color: map-get($map: $colors, $key:'text-black' );
+}

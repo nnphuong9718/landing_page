@@ -1,0 +1,57 @@
+@import '../../../App.scss';
+
+
+.space-gate{
+    &__headline{
+        color: map-get($map: $colors, $key:'gold' );
+        font-size: $font-medium;
+        text-align: left;
+        line-height: unset;
+        margin: 0 10%;
+        @include Responsive (SM) {
+            line-height: 3.8rem;
+            text-align: center;
+
+        }
+    }
+    &__sub-text{
+        color: white;
+        font-size: $font-semi;
+        line-height: unset;
+        text-align: left;
+        margin: 0 10%;
+        margin-top: 15px;
+        @include Responsive (SM) {
+            line-height: 3.6rem;
+            text-align: center;
+
+        }
+    }
+    &__description{
+        text-align: left;
+        color: white;
+        margin: 0 10%;
+        margin-top: 15px;
+        @include Responsive (SM) {
+            text-align: center;
+            margin: 0 15%;
+
+
+        }
+    }
+    &__banner{
+        display: flex;
+        justify-content: center;
+        
+        // margin: 0 10%;
+        img{
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+        }   
+    }
+    &__bottom-icon{
+        display: flex;
+        justify-content: center;
+    }
+}

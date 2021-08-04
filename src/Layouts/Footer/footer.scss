@@ -1,0 +1,105 @@
+@import '../../styles/global.scss';
+@import "../../styles/variable";
+@import '../../styles/mixin';
+
+.footer-container {
+  width: 100%;
+  background-color: map-get($background, 'grey');
+  bottom: 0;
+  margin: -$border-radius-large 0 0 0;
+  padding: $border-radius-large 0 0 0;
+  @include responsive(IP) {
+    text-align: center;
+  }
+  @include responsive(MD) {
+    text-align: start;
+  }
+
+
+  .footer-logo {
+    img {
+      max-height: 4.8rem;
+      transition: 0.5s;
+      pointer-events: none;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.row {
+  width: 90%;
+  max-width: 112.4rem;
+  margin: 0 auto;
+  padding: 7rem 0;
+}
+
+.col1 {
+  &__title {
+    margin-top: 2rem;
+    font-size: $font-normal;
+    color: map-get($background, 'grey1');
+  }
+
+  &__social-container {
+    margin-top: 2rem;
+    &__icon {
+      font-size: $font-normal;
+      width: 4rem;
+      height: 4rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      color: map-get($text-color, 'white');
+      border-radius: 50%;
+      cursor: pointer;
+      text-align: center;
+      line-height: 3rem;
+      background-color: map-get($background, 'yellow');
+      margin-right: 2rem;
+      transition: 0.3s;
+    }
+    &__icon:hover {
+      background-color: map-get($background, 'yellow');
+      transform: scale(1.2);
+    }
+  }
+}
+
+.col2 {
+  &__text {
+    cursor: pointer;
+    font-size: $font-normal;
+    color: map-get($background, 'grey1');
+    margin-top: 1rem;
+    &:nth-child(1) {
+      font-weight: bold;
+    }
+  }
+  &__text:nth-child(1) {
+    margin-top: 1rem;
+  }
+
+  a{
+    display: block;
+    &:hover{
+      color: $gray1;
+    }
+  }
+}
+
+.col3 {
+  display: flex !important;
+  @include responsive(IP) {
+    justify-content: center;
+    // text-align: center;
+  }
+  @include responsive(MD) {
+    // justify-content: center;
+    // align-self: center;
+  }
+  @include responsive(XL) {
+    justify-content: flex-end;
+  }
+}
